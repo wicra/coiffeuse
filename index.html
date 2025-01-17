@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- TITRE -->
+        <title>COIFFEUSE</title>
+
+        <!-- STYLES -->
+        <link rel="stylesheet" href="styles/style.css" />
+
+        <!-- ICON -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+
+        <!-- SCRIPT -->
+        <script src="scripts/main.js"></script>
+
+        <!-- FAVICON -->
+        <link id="favicon" rel="icon" rel="image/png" href="assets/images/profil.jpg" />
+
+        <!-- SCROLL ANIM-->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    </head>
+
+    <body>
+        <!-- HEADER -->
+        <header class="header">
+            <!-- NAVBAR -->
+            <nav>
+                <div class="nav-container">
+                <!-- LOGO -->
+                <div class="logo">
+                    <a href="#">Coiffeuse</a>
+                </div>
+                <!-- MENU ICON FOR MOBILE -->
+                <button class="menu-icon" aria-label="Ouvrir le menu" aria-expanded="false">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+                <!-- NAV LINKS -->
+                <ul class="nav-links" aria-hidden="true">
+                    <li><a href="#home">Accueil</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <!-- CLOSE ICON FOR MOBILE -->
+                <button class="close-icon" aria-label="Fermer le menu" aria-expanded="true">
+                    <i class="fa-solid fa-xmark fa-shake"></i>
+                </button>
+                </div>
+            </nav>
+        </header>
+
+        <!-- MAIN -->
+        <main>
+            <!-- HERO SECTION -->
+            <section id="home" class="hero">
+                <div class="hero-content" data-aos="fade-up">
+                <h1>Bienvenue chez Coiffeuse</h1>
+                <p>Transformez votre look avec nos experts en coiffure</p>
+                <div class="contact">
+                    <a href="#contact" ><i class="fa-solid fa-phone"></i></a>
+                    <a href="#contact" ><i class="fa-solid fa-envelope"></i></a>
+                    <a href="#contact" ><i class="fa-solid fa-map-marker"></i></a>
+                </div>
+                <a href="#services" id="status-link" class="btn"></a>
+
+                <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                    const statusLink = document.getElementById("status-link");
+                    const currentHour = new Date().getHours();
+                    const openingHour = 9; // Heure d'ouverture (9h)
+                    const closingHour = 18; // Heure de fermeture (18h)
+                
+                    if (currentHour >= openingHour && currentHour < closingHour) {
+                        statusLink.textContent = "Actuellement Ouvert";
+                    } else {
+                        statusLink.textContent = "Actuellement Fermé";
+                    }
+                    });
+                </script>
+                </div>
+            </section>
+
+            <!-- SERVICES SECTION -->
+            <section id="services" class="services">
+                <div class="container">
+                <h2 data-aos="fade-up">Nos Services</h2>
+                <div class="service-cards">
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <img
+                        src="assets/imgs/mostafa-meraji-iAMGDmQ6bUY-unsplash.jpg"
+                        alt="Service 1"
+                    />
+                    <h3>Coupe de Cheveux</h3>
+                    <p>Des coupes modernes et classiques pour tous les styles.</p>
+                    </div>
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <img
+                        src="assets/imgs/mostafa-meraji-ICD8yAhWlL4-unsplash.jpg"
+                        alt="Service 2"
+                    />
+                    <h3>Coloration</h3>
+                    <p>
+                        Des couleurs vibrantes et naturelles pour sublimer votre look.
+                    </p>
+                    </div>
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <img
+                        src="assets/imgs/nicolas-flor-_m2UsPnxaww-unsplash.jpg"
+                        alt="Service 3"
+                    />
+                    <h3>Soins Capillaires</h3>
+                    <p>Des soins personnalisés pour des cheveux en pleine santé.</p>
+                    </div>
+                </div>
+                </div>
+            </section>
+
+            <!-- ABOUT SECTION -->
+            <section id="about" class="about">
+                <div class="container">
+                <h2 data-aos="fade-up">À propos de nous</h2>
+                <p data-aos="fade-up" data-aos-delay="100">
+                    Chez Coiffeuse, nous sommes passionnés par la beauté et le bien-être
+                    de vos cheveux. Notre équipe de professionnels est dédiée à vous
+                    offrir des services de qualité dans une ambiance chaleureuse et
+                    accueillante. Nous utilisons des produits de haute qualité pour
+                    garantir les meilleurs résultats pour vos cheveux.
+                </p>
+                </div>
+            </section>
+
+            <!-- HOURS SECTION -->
+            <section id="hours" class="hours">
+                <div class="container">
+                    <h2 data-aos="fade-up">Horaires d'ouverture</h2>
+                    <table class="hours-table" data-aos="fade-up" data-aos-delay="100">
+                        <thead>
+                        <tr>
+                            <th>Jour</th>
+                            <th>Heures</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Lundi</td>
+                            <td>Fermé</td>
+                        </tr>
+                        <tr>
+                            <td>Mardi</td>
+                            <td>09:00 - 18:00</td>
+                        </tr>
+                        <tr>
+                            <td>Mercredi</td>
+                            <td>09:00 - 18:00</td>
+                        </tr>
+                        <tr>
+                            <td>Jeudi</td>
+                            <td>09:00 - 18:00</td>
+                        </tr>
+                        <tr>
+                            <td>Vendredi</td>
+                            <td>09:00 - 18:00</td>
+                        </tr>
+                        <tr>
+                            <td>Samedi</td>
+                            <td>09:00 - 18:00</td>
+                        </tr>
+                        <tr>
+                            <td>Dimanche</td>
+                            <td>Fermé</td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- ADDRESS -->
+                    <div class="address" data-aos="fade-up" data-aos-delay="200">
+                        <h2>Adresse</h2>
+                        <p>123 Rue de la Beauté, 75000 Paris, France</p>
+
+                        <iframe
+                        id="map"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20261.589030288433!2d3.0507803301257943!3d50.59555458366408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c2d4356fdfaf7b%3A0x40af13e81646b50!2s59155%20Faches-Thumesnil!5e0!3m2!1sfr!2sfr!4v1737143628249!5m2!1sfr!2sfr"
+                        width="100%"
+                        height="300"
+                        style="border: 0"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        ></iframe>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- TESTIMONIALS SECTION -->
+            <section id="testimonials" class="testimonials">
+                <div class="container">
+                    <h2 data-aos="fade-up">Témoignages</h2>
+                    <div class="testimonial-cards">
+                        <div
+                        class="testimonial-card"
+                        data-aos="fade-up"
+                        data-aos-delay="100"
+                        >
+                        <p>
+                            "Un service exceptionnel et une équipe très professionnelle. Je
+                            suis ravie de ma nouvelle coupe!"
+                        </p>
+                        <h3>- Marie Dupont</h3>
+                        </div>
+                        <div
+                        class="testimonial-card"
+                        data-aos="fade-up"
+                        data-aos-delay="200"
+                        >
+                        <p>
+                            "La meilleure expérience de coiffure que j'ai jamais eue. Mes
+                            cheveux n'ont jamais été aussi beaux."
+                        </p>
+                        <h3>- Jean Martin</h3>
+                        </div>
+                        <div
+                        class="testimonial-card"
+                        data-aos="fade-up"
+                        data-aos-delay="300"
+                        >
+                        <p>
+                            "Des produits de qualité et un accueil chaleureux. Je recommande
+                            vivement ce salon."
+                        </p>
+                        <h3>- Sophie Bernard</h3>
+                        </div>
+                    </div>
+                    <a href="#comment-form" class="btn-comment">Laisser un commentaire</a>
+
+                </div>
+            </section>
+
+
+            <!-- GRID -->
+            <section  class="Grid">
+                <h2>gallery</h2>
+
+                <div class="img-section">
+                    <div data-aos="zoom-out-right" class="img vertical">
+                        <img src="assets/imgs/mostafa-meraji-iAMGDmQ6bUY-unsplash.jpg"></img>
+                    </div>
+                    <div data-aos="zoom-out-left" class="img horizontal">
+                        <img src="assets/imgs/mostafa-meraji-ICD8yAhWlL4-unsplash.jpg" ></img>
+                    </div>
+
+                    <div  class="img horizontal divise">
+                        <!-- Diviser cet emplacement en deux grilles -->
+                        <div data-aos="zoom-out-right" class="img">
+                            <img src="assets/imgs/lindsay-cash-x1UvHQ-OWvw-unsplash.jpg" ></img>
+                        </div>
+                        <div data-aos="zoom-out-left" class="img">
+                            <img src="assets/imgs/nicolas-flor-_m2UsPnxaww-unsplash.jpg"></img>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="container">
+                <h3>Inscrivez-vous à notre newsletter</h3>
+                <form class="newsletter-form">
+                <input type="email" placeholder="Votre email" required />
+                <button type="submit">Envoyer</button>
+                </form>
+                <h2 class="contact-copyright"><span>© 2025 - SERGIO WICRAMACHINE</span></h2>
+            </div>
+        </footer>
+
+        <!-- SCRIPT -->
+        <script>
+            const menuIcon = document.querySelector(".menu-icon");
+            const closeIcon = document.querySelector(".close-icon");
+            const navLinks = document.querySelector(".nav-links");
+            const body = document.querySelector("body");
+
+            menuIcon.addEventListener("click", () => {
+            navLinks.classList.add("active");
+            menuIcon.setAttribute("aria-expanded", "true");
+            navLinks.setAttribute("aria-hidden", "false");
+            body.classList.add("menu-open");
+            });
+
+            closeIcon.addEventListener("click", () => {
+            navLinks.classList.remove("active");
+            menuIcon.setAttribute("aria-expanded", "false");
+            navLinks.setAttribute("aria-hidden", "true");
+            body.classList.remove("menu-open");
+            });
+
+            // Close menu when a link is clicked
+            navLinks.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", () => {
+                navLinks.classList.remove("active");
+                menuIcon.setAttribute("aria-expanded", "false");
+                navLinks.setAttribute("aria-hidden", "true");
+                body.classList.remove("menu-open");
+            });
+            });
+
+
+            // Scroll 
+            AOS.init();
+        </script>
+    </body>
+</html>
